@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.content {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+}
+
+/* Styles for header, navigation, content, footer */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white; /* Adjusting the text color for project cards */
+}
+
+
+/* Existing CSS styles remain the same */
+
+/* Styling for all project cards including Sports, Games, and Shows */
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    margin-bottom: 20px; /* Add margin to space out the cards */
+    height: auto; /* Auto height adjustment */
+}
+
+/* Styles for Sports, Games, and Shows */
+.likes {
+    padding: 20px;
+}
+
+/* Styling for the grid layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid layout */
+    gap: 20px;
+}
+
+/* Adjust specific cards */
+.project-grid .project-card:nth-child(4),
+.project-grid .project-card:nth-child(5),
+.project-grid .project-card:nth-child(6) {
+    height: 517px; /* Auto height adjustment for Sports, Games, Shows cards */
+}
+
+
+/* Adjusting the styling for the images and table */
+.show-images {
+    margin-top: 20px;
+}
+
+.show-images table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.show-images th,
+.show-images td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.show-images img {
+    width: 100%;
+    height: 300px; /* Set a specific height for uniformity */
+    object-fit: cover;
+}

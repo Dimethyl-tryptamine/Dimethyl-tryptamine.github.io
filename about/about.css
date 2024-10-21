@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.timeline {
+    float: left;
+    margin-left: 100px; /* Adjust the left margin as needed */
+    width: 2px; /* Adjust the width of the line as needed */
+    height: 100vh; /* Make the line reach from the top to the bottom */
+    background-color: white; /* Set the color of the line */
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: 40px; /* Move 40 pixels to the right */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-with-text {
+    overflow: auto;
+}
+
+.image-with-text img {
+    max-width: 200px;
+    margin-right: 20px;
+    float: left;
+}
+
+/* Center the "About Me" text */
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px; /* Move 40 pixels to the right */
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline li span {
+    position: absolute;
+    left: -20px; /* Adjust this value as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+}
+
+.timeline li .date {
+    display: inline-block;
+    transform: rotate(0deg); /* Change from -90deg to 0deg */
+}
+
+
+/* Adjust the position of the timeline, dates, and words */
+.timeline {
+    float: left;
+    margin-left: 100px; /* Adjust the left margin as needed */
+    width: 2px; /* Adjust the width of the line as needed */
+    height: 100vh; /* Make the line reach from the top to the bottom */
+    background-color: white; /* Set the color of the line */
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    transform: rotate(0deg); /* Adjust from -90deg to 0deg */
+}
+
+.timeline li .date {
+    display: inline-block;
+    margin-right: -40px; /* Adjust the margin as needed */
+}
+
+.timeline li .word {
+    display: inline-block;
+    margin-left: 100px; /* Adjust the margin as needed */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: black;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    margin-left: 40px; /* Move 40 pixels to the right */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.content {
+    padding: 20px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-with-text {
+    overflow: auto;
+}
+
+.image-with-text img {
+    max-width: 200px;
+    margin-right: 20px;
+    float: left;
+}
+
+/* Center the "About Me" text */
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 40px; /* Move 40 pixels to the right */
+}

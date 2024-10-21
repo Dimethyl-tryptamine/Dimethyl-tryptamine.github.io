@@ -7,10 +7,10 @@ body {
 
 .timeline {
     float: left;
-    margin-left: 100px; /* Adjust the left margin as needed */
-    width: 2px; /* Adjust the width of the line as needed */
-    height: 100vh; /* Make the line reach from the top to the bottom */
-    background-color: white; /* Set the color of the line */
+    margin-left: 100px;
+    width: 2px; 
+    height: 100vh; 
+    background-color: white; 
 }
 
 .timeline ul {
@@ -38,7 +38,7 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-left: 40px; /* Move 40 pixels to the right */
+    margin-left: 40px; 
 }
 
 nav ul li {
@@ -74,11 +74,11 @@ nav ul li a:hover {
     float: left;
 }
 
-/* Center the "About Me" text */
+
 h1 {
     display: flex;
     justify-content: center;
-    margin-left: 40px; /* Move 40 pixels to the right */
+    margin-left: 40px; 
 }
 
 .timeline li {
@@ -88,7 +88,7 @@ h1 {
 
 .timeline li span {
     position: absolute;
-    left: -20px; /* Adjust this value as needed */
+    left: -20px; 
     top: 50%;
     transform: translateY(-50%);
     white-space: nowrap;
@@ -96,17 +96,17 @@ h1 {
 
 .timeline li .date {
     display: inline-block;
-    transform: rotate(0deg); /* Change from -90deg to 0deg */
+    transform: rotate(0deg); 
 }
 
 
-/* Adjust the position of the timeline, dates, and words */
+
 .timeline {
     float: left;
-    margin-left: 100px; /* Adjust the left margin as needed */
-    width: 2px; /* Adjust the width of the line as needed */
-    height: 100vh; /* Make the line reach from the top to the bottom */
-    background-color: white; /* Set the color of the line */
+    margin-left: 100px; 
+    width: 2px; 
+    height: 100vh; 
+    background-color: white; 
 }
 
 .timeline ul {
@@ -116,17 +116,17 @@ h1 {
 
 .timeline li {
     margin-bottom: 20px;
-    transform: rotate(0deg); /* Adjust from -90deg to 0deg */
+    transform: rotate(0deg); 
 }
 
 .timeline li .date {
     display: inline-block;
-    margin-right: -40px; /* Adjust the margin as needed */
+    margin-right: -40px; 
 }
 
 .timeline li .word {
     display: inline-block;
-    margin-left: 100px; /* Adjust the margin as needed */
+    margin-left: 100px; 
 }
 
 header {
@@ -144,7 +144,7 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-left: 40px; /* Move 40 pixels to the right */
+    margin-left: 40px; 
 }
 
 nav ul li {
@@ -180,9 +180,9 @@ nav ul li a:hover {
     float: left;
 }
 
-/* Center the "About Me" text */
+
 h1 {
     display: flex;
     justify-content: center;
-    margin-left: 40px; /* Move 40 pixels to the right */
+    margin-left: 40px; 
 }

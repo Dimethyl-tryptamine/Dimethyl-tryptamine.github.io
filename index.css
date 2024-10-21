@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('cicada.jpg'); /* Replace 'your-image.jpg' with your image path */
+    background-image: url('cicada.jpg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -48,7 +48,7 @@ nav ul li a:hover {
     color: red;
 }
 
-/* Rest of your CSS remains unchanged */
+
 
 
 section {

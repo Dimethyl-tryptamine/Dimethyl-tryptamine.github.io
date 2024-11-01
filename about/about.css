@@ -3,24 +3,75 @@ body {
     font-family: Arial, sans-serif;
     background-color: black;
     color: white;
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack elements vertically */
+    min-height: 100vh; /* Full viewport height */
+}
+
+
+.my-games{
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.container {
+    display: flex; /* Main layout */
 }
 
 .timeline {
-    float: left;
-    margin-left: 100px;
     width: 2px; 
-    height: 100vh; 
     background-color: white; 
+}
+
+.image-with-text p{
+    padding: 5px;
+    margin: 5px;
 }
 
 .timeline ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    margin-left: 10px; /* Adjust spacing */
 }
 
-.timeline li {
-    margin-bottom: 20px;
-    white-space: nowrap;
+.my-skills {
+    padding: 20px;
+    padding-left: 0px;
+    margin-left: 20px;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0px;
+}
+
+table {
+    width: 100%; /* Full table width */
+    border-collapse: separate; /* Separate borders */
+    border-spacing: 20px; /* Spacing between cells */
+    font-size: 20px; /* Table font size */
+}
+
+th {
+    background-color: #333; /* Header background */
+    color: white; /* Header text color */
+    padding: 10px; /* Header padding */
+}
+
+td {
+    background-color: #555; /* Data cell background */
+    color: white; /* Data cell text color */
+    padding: 10px; /* Data cell padding */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#portray {
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 380px;
+    width: 1200px;
 }
 
 header {
@@ -38,7 +89,6 @@ nav ul {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-left: 40px; 
 }
 
 nav ul li {
@@ -55,43 +105,74 @@ nav ul li a:hover {
     color: red;
 }
 
-.content {
-    padding: 20px;
+.my-story {
+    padding: 0;
     text-align: justify;
     font-size: 16px;
     line-height: 1.6;
-    max-width: 1200px;
-    margin: auto;
+    
+    margin: 20px;
 }
 
 .image-with-text {
     overflow: auto;
+    border: 3px solid white;
+    border-radius: 10px
 }
 
 .image-with-text img {
+    display: block;
+    margin: auto;
     max-width: 200px;
-    margin-right: 20px;
-    float: left;
 }
 
 
 h1 {
     display: flex;
     justify-content: center;
-    margin-left: 40px; 
+    margin-top: 0px;
+
 }
 
+h2{
+    display: flex;
+    justify-content: center;
+}
+.timeline-container {
+    padding: 20px; /* Add padding to the container */
+    padding-left: 60px;
+    margin-right: 80px; /* Add margin around the container */ 
+    
+    
+    
+}
+
+.timeline {
+    width: 2px; 
+    background-color: white; 
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 10px; /* Adjust as needed for spacing */
+}
+
+
 .timeline li {
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 30px; /* Increased margin between timeline events */
+    position: relative; /* Allows absolute positioning of the date span */
 }
 
 .timeline li span {
     position: absolute;
-    left: -20px; 
+    left: -50px; /* Move the date further from the line */
     top: 50%;
-    transform: translateY(-50%);
-    white-space: nowrap;
+    transform: translateY(-50%); /* Centers the date vertically */
+    white-space: nowrap; /* Prevents line breaks in the date */
+    font-weight: bold; /* Makes the date stand out */
+    font-size: 16px; /* Adjust font size for better readability */
 }
 
 .timeline li .date {
@@ -99,90 +180,3 @@ h1 {
     transform: rotate(0deg); 
 }
 
-
-
-.timeline {
-    float: left;
-    margin-left: 100px; 
-    width: 2px; 
-    height: 100vh; 
-    background-color: white; 
-}
-
-.timeline ul {
-    list-style: none;
-    padding: 0;
-}
-
-.timeline li {
-    margin-bottom: 20px;
-    transform: rotate(0deg); 
-}
-
-.timeline li .date {
-    display: inline-block;
-    margin-right: -40px; 
-}
-
-.timeline li .word {
-    display: inline-block;
-    margin-left: 100px; 
-}
-
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: black;
-}
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    margin-left: 40px; 
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a:hover {
-    color: red;
-}
-
-.content {
-    padding: 20px;
-    text-align: justify;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.image-with-text {
-    overflow: auto;
-}
-
-.image-with-text img {
-    max-width: 200px;
-    margin-right: 20px;
-    float: left;
-}
-
-
-h1 {
-    display: flex;
-    justify-content: center;
-    margin-left: 40px; 
-}

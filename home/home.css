@@ -1,60 +1,49 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: hsl(0, 0%, 0%);
 }
 
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
+    background-color: black;
+    font-family: Arial, sans-serif; 
+    color: #f0f0f0;
+    font-size: 16px;
 }
 
 .hero {
-    min-height: 100vh; 
-    width: 100%;
-    background-image: url("Website\ home\ page\ backround.jpg");
-    background-size: cover; 
-    aspect-ratio: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding-bottom: 300px;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-image: url("Website\ home\ page\ backround.jpg"); /* Ensure the correct path */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    position: relative; /* Ensure it can contain absolutely positioned elements */
 }
 
 
 #image-of-me {
-    width: 20%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 10px;
+    width: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100px;
 }
 
-body {
-    font-family: Arial, sans-serif; 
-    color: #f0f0f0;
-    font-size: 16px; 
-    
-}
-
-h1 {
-    float: left;
+b {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
 }
 
 header {
     font-size: 25px;
     display: flex;
-    align-content: center;
-}
-
-nav {
-    margin-left: auto;
-    display: flex;
+    align-items: center;
     justify-content: space-between;
+    background: transparent;
 }
 
 nav ul {
@@ -66,21 +55,34 @@ nav ul li a {
     margin: 20px;
     text-decoration: none;
     color: white;
-    display: flex;
-    justify-content: center;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
     color: red;
-    transition: color 0.3s;
 }
 
 .card-container {
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    justify-content: center;
-    gap: 30px;
+    display: flex; /* Use flexbox for horizontal layout */
+    position: absolute; /* Allow the container to be positioned freely */
+    width: max-content; /* Width is based on content size, allowing horizontal scrolling */
+    animation: scroll 20s linear infinite; /* Continuous horizontal scrolling animation */
+    gap: 80px; /* Add space between cards */
+    background-color: transparent;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%); /* Starts the animation from the right edge of the viewport */
+    }
+    100% {
+        transform: translateX(-100%); /* Ends the animation at the left edge of the viewport */
+    }
+}
+
+/* Pause scrolling on hover */
+.card-container:hover {
+    animation-play-state: paused; /* Pauses the animation when the mouse hovers over the container */
 }
 
 .card {
@@ -90,13 +92,9 @@ nav ul li a:hover {
     background-color: #333;
     padding: 20px;
     border-radius: 5px;
-    margin: auto;
-    box-shadow: 20px 20px 20px rgba(255, 0, 0, 0.2);
-    max-width: 500px;
-    max-height: 500px;
     width: 100%;
-    height: auto;
-    aspect-ratio: 1;
+    max-width: 900px; /* Adjusted for better spacing */
+    aspect-ratio: 1; /* Keep the aspect ratio */
 }
 
 .show-images table {
@@ -105,21 +103,10 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
-.show-images th, .show-images td {
-    margin: 0;
-    padding: 0;
-    border: 1px solid #ddd;
-    text-align: center;
-}
-
 .show-images img {
     width: 100%;
     height: 240px;
     object-fit: cover;
-}
-
-#spotify {
-    justify-content: center;
 }
 
 #mal {

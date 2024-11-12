@@ -41,7 +41,7 @@ body {
     padding-left: 0px;
     margin-left: 20px;
     text-align: justify;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
     max-width: 1200px;
     margin: 0px;
@@ -55,12 +55,14 @@ table {
 }
 
 th {
+    text-align: center;
     background-color: #333; /* Header background */
     color: white; /* Header text color */
     padding: 10px; /* Header padding */
 }
 
 td {
+    text-align: center;
     background-color: #555; /* Data cell background */
     color: white; /* Data cell text color */
     padding: 10px; /* Data cell padding */
@@ -179,4 +181,9 @@ h2{
     display: inline-block;
     transform: rotate(0deg); 
 }
+
+
+
+
+
 

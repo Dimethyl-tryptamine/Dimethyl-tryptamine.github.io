@@ -1,0 +1,85 @@
+
+h3{
+    text-align: center;
+}
+
+.mastery {
+    float: right;
+    font-weight: bold;
+    
+    
+}
+ul{
+    margin-right: 20px;
+}
+
+li {
+    margin-bottom: 20px; /* Add space below each <li> */
+}
+
+/* Optional: Remove margin from the last <li> to avoid extra space at the end */
+li:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+.masterycard{
+    background-color: #555555;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.masterylvl-0{
+    color: rgb(255, 0, 0);
+}
+
+.masterylvl-1{
+    color: rgb(255, 0, 0);
+}
+
+.masterylvl-2{
+    color: rgb(255, 75, 0);
+}
+
+.masterylvl-3{
+    color: rgb(255, 75, 0);
+}
+
+.masterylvl-4{
+    color: rgb(255, 100, 0);
+}
+
+.masterylvl-5{
+    color: rgb(255, 100, 0);
+}
+
+.masterylvl-6{
+    color: rgb(255, 125, 0);
+}
+
+.masterylvl-7{
+    color: rgb(255, 175, 0);
+}
+
+.masterylvl-8{
+    color: rgb(255, 200, 0);
+}
+
+.masterylvl-9{
+    color: rgb(255, 225, 0);
+}
+
+.masterylvl-10{
+    color: rgb(0, 255, 0);
+}
+
+

@@ -1,61 +1,62 @@
+
+// Select the display box (the div where content will be injected)
 const displayBox = document.getElementById("portray");
 
-// Front-End Development button content
-const frontEndContent = {
-    languages: "<p>This is the content for Front-end Development (Languages)</p>",
-    frameworks: "<p>This is the content for Front-end Development (Frameworks)</p>",
-    tools: "<p>This is the content for Front-end Development (Tools)</p>",
-    empty: "<p>This is the content for Front-end Development (Empty)</p>"
+// Function to fetch an external HTML file and get a specific element by ID
+function fetchAndInjectElement(elementId) {
+    // Start the fetch request
+    fetch("content.html")
+      .then(response => response.text()) // Convert the response to text (HTML content)
+      .then(htmlContent => {
+        // Create a temporary <div> to hold the fetched HTML
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = htmlContent; // Insert the fetched HTML into this container
+  
+        // Select the specific element by ID within the fetched HTML
+        const specificElement = tempContainer.querySelector(`#${elementId}`);
+        if (specificElement) { // Check if the element exists
+          // Clear the current content of the display box before adding new content
+          displayBox.innerHTML = '';
+          // Clone the element and append it to the display box
+          displayBox.appendChild(specificElement.cloneNode(true));
+        }
+  
+        // Find and append all stylesheet links from the fetched HTML to preserve CSS
+        const externalStyles = tempContainer.querySelectorAll('link[rel="stylesheet"]');
+        externalStyles.forEach(styleLink => {
+          const newStyleLink = document.createElement('link');
+          newStyleLink.rel = 'stylesheet';
+          newStyleLink.href = styleLink.href; // Copy the href from the fetched HTML
+          document.head.appendChild(newStyleLink); // Add the new <link> to the head
+        });
+      })
+      .catch(error => console.error('Error fetching HTML:', error)); // Error handling
 };
 
-// Back-End Development button content
-const backEndContent = {
-    languages: "<p>This is the content for Back-End Development (Languages)</p>",
-    frameworks: "<p>This is the content for Back-End Development (Frameworks)</p>",
-    databases: "<p>This is the content for Back-End Development (Databases)</p>",
-    empty: "<p>This is the content for Back-End Development (Empty)</p>"
-};
 
-// DevOps & Deployment button content
-const devOpsContent = {
-    versionControl: "<p>This is the content for DevOps & Deployment (Version Control)</p>",
-    containerization: "<p>This is the content for DevOps & Deployment (Containerization)</p>",
-    tools: "<p>This is the content for DevOps & Deployment (Tools)</p>",
-    cloud: "<p>This is the content for DevOps & Deployment (Cloud)</p>"
-};
 
-// Testing & Quality Assurance button content
-const qaContent = {
-    frameworks: "<p>This is the content for Testing & Quality Assurance (Frameworks)</p>",
-    testing: "<p>This is the content for Testing & Quality Assurance (Testing)</p>",
-    empty: "<p>This is the content for Testing & Quality Assurance (Empty)</p>",
-    empty1: "<p>This is the content for Testing & Quality Assurance (Empty1)</p>"
-};
 
-// Function to set content based on the selected button
-function setContent(content) {
-    displayBox.innerHTML = content;
-}
+
+
 
 // Adding event listeners for Front-End Development buttons
-document.getElementById("fd-Languages").addEventListener("click", () => setContent(frontEndContent.languages));
-document.getElementById("fd-Frameworks").addEventListener("click", () => setContent(frontEndContent.frameworks));
-document.getElementById("fd-Tools").addEventListener("click", () => setContent(frontEndContent.tools));
+document.getElementById("fd-Languages").addEventListener("click", () => fetchAndInjectElement("fd-Languages"));
+document.getElementById("fd-Frameworks").addEventListener("click", () => fetchAndInjectElement("fd-Frameworks"));
+document.getElementById("fd-Tools").addEventListener("click", () => fetchAndInjectElement("fd-Tools"));
 
 // Adding event listeners for Back-End Development buttons
-document.getElementById("be-Languages").addEventListener("click", () => setContent(backEndContent.languages));
-document.getElementById("be-Frameworks").addEventListener("click", () => setContent(backEndContent.frameworks));
-document.getElementById("be-Databases").addEventListener("click", () => setContent(backEndContent.databases));
+document.getElementById("be-Languages").addEventListener("click", () => fetchAndInjectElement("be-Languages"));
+document.getElementById("be-Frameworks").addEventListener("click", () => fetchAndInjectElement("be-Frameworks"));
+document.getElementById("be-Databases").addEventListener("click", () => fetchAndInjectElement("be-Databases"));
 
 // Adding event listeners for DevOps & Deployment buttons
-document.getElementById("dev-VersionControl").addEventListener("click", () => setContent(devOpsContent.versionControl));
-document.getElementById("dev-Containerization").addEventListener("click", () => setContent(devOpsContent.containerization));
-document.getElementById("dev-Tools").addEventListener("click", () => setContent(devOpsContent.tools));
-document.getElementById("dev-Cloud").addEventListener("click", () => setContent(devOpsContent.cloud));
+document.getElementById("dev-VersionControl").addEventListener("click", () => fetchAndInjectElement("dev-VersionControl"));
+document.getElementById("dev-Containerization").addEventListener("click", () => fetchAndInjectElement("dev-Containerization"));
+document.getElementById("dev-Tools").addEventListener("click", () => fetchAndInjectElement("dev-Tools"));
+document.getElementById("dev-Cloud").addEventListener("click", () => fetchAndInjectElement("dev-Cloud"));
 
 // Adding event listeners for Testing & Quality Assurance buttons
-document.getElementById("qa-Frameworks").addEventListener("click", () => setContent(qaContent.frameworks));
-document.getElementById("qa-Testing").addEventListener("click", () => setContent(qaContent.testing));
+document.getElementById("qa-Frameworks").addEventListener("click", () => fetchAndInjectElement("qa-Frameworks"));
+document.getElementById("qa-Testing").addEventListener("click", () => fetchAndInjectElement("qa-Testing"));
 
 
-///// must fix DevOps & Deployment	Testing & Quality Assurance not showing up when clicked on webpage / .portray
